@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+  crossorigin="anonymous"
+/>
+    <meta name="description" content="HTML5 website template">
+    <meta name="keywords" content="global, template, html, sass, jquery">
+    <meta name="author" content="Bucky Maler">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <title>Cloud-app Project</title>
+  </head>
+  <style>
+    /* Create two equal columns that floats next to each other */
+    .column1 {
+      float: left;
+      width: 38%;
+      padding: 10px;
+    
+    }
+    .column2 {
+      float: left;
+      width: 56%;
+      padding: 10px;
+    
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .vertical-center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
+    .perspectiv {
+      background-color: black;
+    }
+
+    h2 {
+      color: white;
+    }
+
+    .container {
+      outline: 0px solid black;
+    }
+    </style>
+  <body>
+    <div class="perspective effect-rotate-left" style="background-color: black;">
+      <div class="container"><div class="outer-nav--return"></div>
+        <div id="viewport" class="l-viewport">
+          <div class="l-wrapper">
+            <header class="header">
+              <a class="header--logo" href="#0">
+                <img src="assets/img/logo.png" alt="Global">
+                <p>Voice Seperator</p>
+              </a>
+          
+              <div class="header--nav-toggle">
+                <span></span>
+              </div>
+            </header>
+            <nav class="l-side-nav">
+              <ul class="side-nav">
+                <li class="is-active"><span>Home</span></li>
+                <li><span>About</span></li>
+                <li><span>Works</span></li>
+                <li><span>Contact</span></li>
+              </ul>
+            </nav>
+            <ul class="l-main-content main-content">
+              <li class="l-section section section--is-active">
+                <div class="intro">
+                  <div class="intro--banner">
+                    <h2 style="font-size:40px">Voice Separation<br>with an Unknown<br>Number of<br>Multiple Speakers</h2>
+                    <img src="assets/img/introduction-visual.png" alt="Welcome">
+                  </div>          
+              </li>
+              <li class="l-section section">
+                <div class="about">
+                  <div class="about--banner">
+                    <p style="font-size: 20px; color: white;">This post presents "Voice Separation with an Unknown Number of Multiple Speakers", a deep model for multi speaker voice separation with single microphone.
+                      We present a new method for separating a mixed audio sequence, in which multiple voices speak simultaneously. The new method employs gated neural networks that are trained to separate the voices at multiple processing steps, while maintaining the speaker in each output channel fixed. A different model is trained for every number of possible speakers, and a the model with the largest number of speakers is employed to select the actual number of speakers in a given sample. Our method greatly outperforms the current state of the art, which, as we show, is not competitive for more than two speakers.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="l-section section">
+                <div class="work">
+                  <h2>Dataset Samples</h2>
+                  <div class="row">
+                    <div class="column1">
+                      <h2>Mixture input</h2>
+                      <p align="center">
+                        <audio controls>
+                          <source src="src\assets\example.wav" type="audio/WAV"/>
+                        </audio>
+                      </p>
+                    </div>
+                    <div class="column2" style="color: white;">
+                      <h2>Output</h2>
+                      <div align="center">
+                        <audio controls style="width: 230px;">
+                          <source src="src\assets\diarization_0.wav" type="audio/WAV"/>
+                        </audio>
+                        Start : 0.498 Finish : 7.079 Speaker : 1
+                      </div>
+                      <div align="center">
+                        <audio controls style="width: 230px;">
+                          <source src="src\assets\diarization_1.wav" type="audio/WAV"/>
+                        </audio>
+                        Start : 8.598 Finish : 10.049 Speaker : 1
+                      </div>
+                      <div align="center">
+                        <audio controls style="width: 230px;">
+                          <source src="src\assets\diarization_2.wav" type="audio/WAV"/>
+                        </audio>
+                        Start : 13.542 Finish : 15.668 Speaker : 1
+                      </div>
+                      <div align="center">
+                        <audio controls style="width: 230px;">
+                          <source src="src\assets\diarization_3.wav" type="audio/WAV"/>
+                        </audio>
+                        Start : 17.744 Finish : 19.330 Speaker : 1
+                      </div>
+                      <div align="center">
+                        <audio controls style="width: 230px;">
+                          <source src="src\assets\diarization_4.wav" type="audio/WAV"/>
+                        </audio>
+                        Start : 20.815 Finish : 33.269 Speaker : 1
+                      </div>
+                      <div align="center">
+                        <audio controls style="width: 230px;">
+                          <source src="src\assets\diarization_5.wav" type="audio/WAV"/>
+                        </audio>
+                        Start : 33.353 Finish : 37.927 Speaker : 2
+                      </div>
+                      <div align="center">
+                        <audio controls style="width: 230px;">
+                          <source src="src\assets\diarization_6.wav" type="audio/WAV"/>
+                        </audio>
+                        Start : 36.526 Finish : "48.389 Speaker : 1
+                      </div>
+                      <div align="center">
+                        <audio controls style="width: 230px;">
+                          <source src="src\assets\diarization_7.wav" type="audio/WAV"/>
+                        </audio>
+                        Start : 49.435 Finish : 81.447 Speaker : 2
+                      </div>
+                      <div align="center">
+                        <audio controls style="width: 230px;">
+                          <source src="src\assets\diarization_8.wav" type="audio/WAV"/>
+                        </audio>
+                        Start : 60.168 Finish : 60.590 Speaker : 1
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="l-section section">
+                <div class="hire">
+                  <h2>This Project Create By</h2>
+                  <div id="root"></div>
+                  <!-- <script type="module" src="/src/main.jsx"></script>
+
+                  <h2 style="margin-top: 50px;">You want us to do</h2>
+            
+                  <form class="work-request">
+                    <div class="work-request--information">
+                      <div class="information-name">
+                        <input id="name" type="text" spellcheck="false">
+                        <label for="name">Name</label>
+                      </div>
+                      <div class="information-email">
+                        <input id="email" type="email" spellcheck="false">
+                        <label for="email">Email</label>
+                      </div>
+                    </div>
+                    <input type="submit" value="Send Request">
+                  </form> -->
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <ul class="outer-nav">
+        <li class="is-active">Home</li>
+        <li>About</li>
+        <li>Works</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+    <script src="assets/js/functions-min.js"></script>
+
+  </body>
