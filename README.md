@@ -11,8 +11,8 @@
     * whisper  ของ openai ใช้ แปลงเสียงเป็น text 
     > ในscript flask จะมีการเรียก script ที่จะทำการประมวลผล ไฟล์เสียง example.wav
     > <br>โดยจะเรียกแยก thread แยกกับตัว flask ตัวflask จะมี 2 route คือ 
-    > * [ml service link](https://ml:5000/) จะเป็น route ที่จะreturn string "Please wait while the audio is being processed." เมื่อ ยังประมวลผมไม่เสร็จ และreturnผลลัพธ์ model เมื่อ ประมวลผมเสร็จ(cpu 5800x ใช้เวลาประมาณ 15 นาที กับ example audio(example.wav)ที่ยาวประมาณ 1.3 นาที)
-    > * [ml service link](https://ml:5000/example) จะเป็น route ที่จะreturn ผมลัพของ model
+    > * [ml:5000](https://ml:5000/) จะเป็น route ที่จะreturn string "Please wait while the audio is being processed." เมื่อ ยังประมวลผมไม่เสร็จ และreturnผลลัพธ์ model เมื่อ ประมวลผมเสร็จ(cpu 5800x ใช้เวลาประมาณ 15 นาที กับ example audio(example.wav)ที่ยาวประมาณ 1.3 นาที)
+    > * [ml:5000/example](https://ml:5000/example) จะเป็น route ที่จะreturn ผมลัพของ model
 
 * **nginx** 
 <br>ใช้ nginx เป็นเราเตอร์ในเซิร์ฟเวอร์ front-end และ node.js รวมถึงเซิร์ฟเวอร์ HTTP เพื่อส่ง react front-end 
@@ -22,7 +22,7 @@
     * CORS
 * **client**
 <br> front-end React +javascript
-<br> มี bug ที่javascript(/CloudApp/client/public/index.html:บรรทัด211) ไม่สามารถดึงget api ของ [ml service link](https://ml:5000/example) ได้ แต่ลองใช้ curl จาก **client** ไป get [ml service link](https://ml:5000/example) แล้วได้ผลลัพธ์ของ model ตามที่คิดไว้
+<br> มี bug ที่javascript(/CloudApp/client/public/index.html:บรรทัด211) ไม่สามารถดึงget api ของ [ml:5000/example](https://ml:5000/example) ได้ แต่ลองใช้ curl จาก **client** ไป get [ml:5000/example](https://ml:5000/example) แล้วได้ผลลัพธ์ของ model ตามที่คิดไว้
 
 * **adminer**
 <br> เป็น interface ไว้ interact กับ MySQL server
