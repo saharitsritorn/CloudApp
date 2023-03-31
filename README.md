@@ -15,7 +15,7 @@
     > * <ml:5000/example> จะเป็น route ที่จะreturn ผมลัพของ model
 
 * **nginx** 
-<br>ใช้ nginxเป็นเราเตอร์ในเซิร์ฟเวอร์ front-end และ node.js รวมถึงเซิร์ฟเวอร์ HTTP เพื่อส่ง react front-end 
+<br>ใช้ nginx เป็นเราเตอร์ในเซิร์ฟเวอร์ front-end และ node.js รวมถึงเซิร์ฟเวอร์ HTTP เพื่อส่ง react front-end 
 * **api**
 <br> จะเป็น back-end สำหรับ login จะประกอบไปด้วย  
     * express.js
