@@ -9,10 +9,10 @@ class App extends Component {
   constructor(props) {
     super(props)
       this.state = {
-        setBookName: '',
-        setReview: '',
+        setName: '',
+        setEmail: '',
         fetchData: [],
-        reviewUpdate: ''
+        emailUpdate: ''
       }
   }
 
@@ -26,7 +26,7 @@ class App extends Component {
 
   handleChange2 = (event) => {
     this.setState({
-      reviewUpdate: event.target.value
+      emailUpdate: event.target.value
     })
   }
 
@@ -57,6 +57,7 @@ class App extends Component {
     axios.put(`/api/update/${id}`, this.state)
     document.location.reload();
   }
+  
   render() {
 
     let card = this.state.fetchData.map((val, key) => {
@@ -64,11 +65,11 @@ class App extends Component {
         <React.Fragment>
           <Card style={{ width: '18rem' }} className='m-2'>
             <Card.Body>
-              <Card.Title>{val.book_name}</Card.Title>
+              <Card.Title>{val.name}</Card.Title>
               <Card.Text>
-                {val.book_review}
+                {val.email}
               </Card.Text>
-              <input name='reviewUpdate' onChange={this.handleChange2} placeholder='Update Email' ></input>
+              <input name='emailUpdate' onChange={this.handleChange2} placeholder='Update Email' ></input>
               <Button className='m-2' onClick={() => { this.edit(val.id) }}>Update</Button>
               <Button onClick={() => { this.delete(val.id) }}>Delete</Button>
             </Card.Body>
@@ -81,8 +82,8 @@ class App extends Component {
       <div className='App'>
         {/* <h1>Dockerized Fullstack React Application</h1> */}
         <div className='form'>
-          <input name='setBookName' placeholder='Enter Name' onChange={this.handleChange} />
-          <input name='setReview' placeholder='Enter Email' onChange={this.handleChange} />
+          <input name='setName' placeholder='Enter Name' onChange={this.handleChange} />
+          <input name='setEmail' placeholder='Enter Email' onChange={this.handleChange} />
         </div>
 
         <Button className='my-2' variant="primary" onClick={this.submit}>Submit</Button> <br /><br/>

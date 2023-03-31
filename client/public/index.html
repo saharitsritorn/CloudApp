@@ -111,55 +111,55 @@
                     </div>
                     <div class="column2" style="color: white;">
                       <h2>Output</h2>
-                      <div align="center">
+                      <div align="center" id="example0">
                         <audio controls style="width: 230px;">
                           <source src="src\assets\diarization_0.wav" type="audio/WAV"/>
                         </audio>
                         Start : 0.498 Finish : 7.079 Speaker : 1
                       </div>
-                      <div align="center">
+                      <div align="center" id="example1">
                         <audio controls style="width: 230px;">
                           <source src="src\assets\diarization_1.wav" type="audio/WAV"/>
                         </audio>
                         Start : 8.598 Finish : 10.049 Speaker : 1
                       </div>
-                      <div align="center">
+                      <div align="center" id="example2">
                         <audio controls style="width: 230px;">
                           <source src="src\assets\diarization_2.wav" type="audio/WAV"/>
                         </audio>
                         Start : 13.542 Finish : 15.668 Speaker : 1
                       </div>
-                      <div align="center">
+                      <div align="center" id="example3">
                         <audio controls style="width: 230px;">
                           <source src="src\assets\diarization_3.wav" type="audio/WAV"/>
                         </audio>
                         Start : 17.744 Finish : 19.330 Speaker : 1
                       </div>
-                      <div align="center">
+                      <div align="center" id="example4">
                         <audio controls style="width: 230px;">
                           <source src="src\assets\diarization_4.wav" type="audio/WAV"/>
                         </audio>
                         Start : 20.815 Finish : 33.269 Speaker : 1
                       </div>
-                      <div align="center">
+                      <div align="center" id="example5">
                         <audio controls style="width: 230px;">
                           <source src="src\assets\diarization_5.wav" type="audio/WAV"/>
                         </audio>
                         Start : 33.353 Finish : 37.927 Speaker : 2
                       </div>
-                      <div align="center">
+                      <div align="center" id="example6">
                         <audio controls style="width: 230px;">
                           <source src="src\assets\diarization_6.wav" type="audio/WAV"/>
                         </audio>
                         Start : 36.526 Finish : "48.389 Speaker : 1
                       </div>
-                      <div align="center">
+                      <div align="center" id="example7">
                         <audio controls style="width: 230px;">
                           <source src="src\assets\diarization_7.wav" type="audio/WAV"/>
                         </audio>
                         Start : 49.435 Finish : 81.447 Speaker : 2
                       </div>
-                      <div align="center">
+                      <div align="center" id="example8">
                         <audio controls style="width: 230px;">
                           <source src="src\assets\diarization_8.wav" type="audio/WAV"/>
                         </audio>
@@ -207,5 +207,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
     <script src="assets/js/functions-min.js"></script>
+    <script>
+      // fetch("http://ml:5000/example")
+      //     .then(response => {
+      //       return response.json();
+      //     })
+      //     .then(data => {
+      //       console.log("data : " + data);
+      //       for (var i = 0; i <= data.length; i++) {
+      //         example = data[i];
+      //         document.getElementById("example" + i).innerHTML += 
+      //         "Start : " + example.start_time + "Finish : " + example.end_time + "Speaker : " + example.speaker + "<br>"
+      //       }
+      //     }).catch(err => {
+      //       //Do something for an error here
+      //     })
+    </script>
 
   </body>

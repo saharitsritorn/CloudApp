@@ -1,7 +1,7 @@
 version: '3.8'
 
 x-common-variables: &common-variables
-  MYSQL_DATABASE: books
+  MYSQL_DATABASE: project
   MYSQL_USER: MYSQL_USER
   MYSQL_PASSWORD: MYSQL_PASSWORD
 
@@ -17,8 +17,10 @@ services:
       - "9906:3306"
     environment:
       <<: *common-variables
-      MYSQL_ROOT_PASSWORD: MYSQL_ROOT_PASSWORD
+      MYSQL_ROOT_PASSWORD: 123456
       MYSQL_HOST: localhost
+    networks:
+      - voice_separator
 
   nginx:
     depends_on:
@@ -30,6 +32,8 @@ services:
       context: ./nginx
     ports:
       - "3050:80"
+    networks:
+      - voice_separator
 
   api:
     build:
@@ -43,7 +47,15 @@ services:
     environment:
       <<: *common-variables
       MYSQL_HOST_IP: mysql_db
-
+    networks:
+      - voice_separator
+  ml:
+    build: ./app
+    ports:
+      - "5000:5000"
+    networks:
+      - voice_separator
+    
   client:
     stdin_open: true
     environment:
@@ -54,13 +66,21 @@ services:
     volumes:
       - /app/node_modules
       - ./client:/app
+    networks:
+      - voice_separator
 
   adminer:
-      image: adminer:latest
-      restart: unless-stopped
-      ports:
-        - 8000:8080
-      depends_on:
-        - mysql_db
-      environment:
-        ADMINER_DEFAULT_SERVER: mysql_db
+    image: adminer:latest
+    restart: unless-stopped
+    ports:
+      - 8000:8080
+    depends_on:
+      - mysql_db
+    environment:
+      ADMINER_DEFAULT_SERVER: mysql_db
+    networks:
+      - voice_separator
+
+networks:
+  voice_separator:
+    driver: bridge
