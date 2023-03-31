@@ -22,7 +22,7 @@
     * CORS
 * **client**
 <br> front-end React +javascript
-<br> มี bug ที่javascript(/CloudApp/client/public/index.html:บรรทัด211) ไม่สามารถดึงget api ของ **ml:5000/example** ได้ แต่ลองใช้ curl จาก **client** ไป get **ml:5000/example** แล้วได้ผลลัพธ์ของ model ตามที่คิดไว้
+<br> มี bug ที่javascript(/CloudApp/client/public/index.html:บรรทัด211) ไม่สามารถดึงget api ของ <ml:5000/example> ได้ แต่ลองใช้ curl จาก **client** ไป get <ml:5000/example> แล้วได้ผลลัพธ์ของ model ตามที่คิดไว้
 
 * **adminer**
 <br> เป็น interface ไว้ interact กับ MySQL server
