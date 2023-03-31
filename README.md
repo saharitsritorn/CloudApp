@@ -11,7 +11,7 @@
     * whisper  ของ openai ใช้ แปลงเสียงเป็น text 
     > ในscript flask จะมีการเรียก script ที่จะทำการประมวลผล ไฟล์เสียง example.wav
     > <br>โดยจะเรียกแยก thread แยกกับตัว flask ตัวflask จะมี 2 route คือ 
-    > * <ml:5000/> จะเป็น route ที่จะreturn string "Please wait while the audio is being processed." เมื่อ ยังประมวลผมไม่เสร็จ และreturnผลลัพธ์ model เมื่อ ประมวลผมเสร็จ(cpu 5800x ใช้เวลาประมาณ 30min กับ example audio(example.wav)ที่ยาวประมาณ 1.3 นาที)
+    > * <ml:5000/> จะเป็น route ที่จะreturn string "Please wait while the audio is being processed." เมื่อ ยังประมวลผมไม่เสร็จ และreturnผลลัพธ์ model เมื่อ ประมวลผมเสร็จ(cpu 5800x ใช้เวลาประมาณ 15 นาที กับ example audio(example.wav)ที่ยาวประมาณ 1.3 นาที)
     > * <ml:5000/example> จะเป็น route ที่จะreturn ผมลัพของ model
 
 * **nginx** 
